@@ -44,8 +44,6 @@ Welcome to **Hand Gesture Recognition** — a real-time project that detects you
    ```bash
    python gesture.py
 
----
-
 4. **Instructions**
 - Show your hand inside the green box.
 - Try different gestures — numbers, OK, Thumbs Up.
