@@ -61,7 +61,7 @@ while True:
                 if fingers[0] == 1:
                     gesture_text = "1"
                 else:
-                    gesture_text = "Thumbs Up (Best of Luck)"
+                    gesture_text = "Best of Luck"
             elif total_fingers == 2:
                 gesture_text = "2"
             elif total_fingers == 3:
