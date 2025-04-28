@@ -1,17 +1,21 @@
-# 🚀 Hand Gesture Recognition Using MediaPipe
+# ✋ Hand Gesture Recognition with OpenCV & Mediapipe
 
-Welcome to **Hand Gesture Recognition** — a real-time project that detects your hand movements (0️⃣ to 5️⃣, ✌️ OK sign, 👍 Thumbs up, ✋ High-five, ✨ Best of Luck) using your laptop or PC camera!
+## 📌 Overview
+
+Welcome to Hand Gesture Recognition, a real-time computer vision project that detects hand gestures using OpenCV and Mediapipe!
+Wave your hand in front of the camera, and it can recognize common gestures like OK, Thumbs Up, and finger counts from 1 to 5 — all in real-time. 🚀
 
 ---
 
-## ✨ Features
-- Real-time hand tracking using **MediaPipe**.
-- Finger counting (0 to 5).
-- Detect "OK" sign.
-- Detect "Thumbs Up" gesture.
-- "Best of Luck" hand sign recognition.
-- Smooth FPS (~25-30) on normal laptops.
-- No external deep learning model training needed.
+## 🎯 Project Highlights
+
+- ✅ Real-time hand tracking using **MediaPipe**
+- ✅ Real-time Gesture Detection
+- ✅ Finger Counting (0-5 Fingers)
+- ✅ Custom Gestures: OK, Thumbs Up (Best of Luck)
+- ✅ Live Webcam Feed with Annotations
+- ✅ Lightweight & Fast (Optimized for Speed)
+- ✅ Extendable for Custom Gestures
 
 ---
 
@@ -23,28 +27,47 @@ Welcome to **Hand Gesture Recognition** — a real-time project that detects you
 
 ---
 
-## 📸 Demo
+## ✨ How it Works
 
-![image](https://github.com/user-attachments/assets/58159d64-c108-4ceb-b9da-1e68a713d888)
-
+- Hand Detection: **Mediapipe detects 21 hand landmarks with high accuracy.**
+- Finger State Calculation:
+              1. **If the fingertip landmark is above the middle joint landmark → Finger is open.**
+              2. **For the thumb, x-axis comparison is used instead of y-axis.**
+- Gesture Recognition: **Based on the number and position of open fingers, predefined gestures are recognized.**
+- Display: **Detected gesture text is overlayed onto the live video frame beautifully!**
 
 ---
 
-## 🚀 How To Run
-1. **Clone the Repository**
+## 📸 Sample Outputs
+
+| ✋ Gesture         | 🏷️ Detected Label                      |
+|:------------------|:--------------------------------------|
+| 👌 OK Sign         | `Detected Gesture: OK`                |
+| 👍 Thumbs Up       | `Detected Gesture: Thumbs Up (Best of Luck)` |
+| ☝️ One Finger      | `Detected Gesture: 1`                 |
+| ✌️ Two Fingers     | `Detected Gesture: 2`                 |
+| 🤟 Three Fingers   | `Detected Gesture: 3`                 |
+| 🖖 Four Fingers    | `Detected Gesture: 4`                 |
+| 🖐️ Five Fingers    | `Detected Gesture: 5`                 |
+
+---
+
+## 🚀 Quick Start
+1. **1. Clone the Repository**
    ```bash
    git clone https://github.com/your-username/hand-gesture-recognition.git
    cd hand-gesture-recognition
 
-2. **Install Required Packages**
-  ```bash
-  pip install opencv-python mediapipe
+2. **Install Dependencies**
+   ```bash
+   pip install opencv-python mediapipe
+   (Make sure Python 3.7+ is installed)
 
-3. **Run the Script**
+4. **Run the Script**
    ```bash
    python gesture.py
 
-4. **Instructions**
+5. **Instructions**
 - Show your hand inside the green box.
 - Try different gestures — numbers, OK, Thumbs Up.
 - Press Esc to exit.
@@ -52,7 +75,7 @@ Welcome to **Hand Gesture Recognition** — a real-time project that detects you
 ---
 
 ## 📦 Folder Structure
-![image](https://github.com/user-attachments/assets/7aac7093-e7a9-45a9-a729-dae0436172f6)
+![image](https://github.com/user-attachments/assets/c3de0203-2ea0-47cb-b2ef-552cf8d9d03a)
 
 ---
 
@@ -75,8 +98,18 @@ Welcome to **Hand Gesture Recognition** — a real-time project that detects you
 ---
 
 ## 🙌 Acknowledgements
+
 - **Google MediaPipe** - for Hand Landmarks.
 - **OpenCV** - for computer vision magic.
+
+---
+
+## 🌟 Future Plans
+
+- 🔮 **Add recognition for more advanced gestures (e.g., "Rock & Roll", "Peace Sign").**
+- 🎵 **Integrate sound or haptic feedback on gesture detection.**
+- 📈 **Build a dashboard showing gesture detection statistics.**
+- 🧠 **Integrate AI/ML models for complex gesture classifications.**
 
 ---
 
@@ -87,5 +120,6 @@ Welcome to **Hand Gesture Recognition** — a real-time project that detects you
 ---
 
 ## 🔥 Made with Passion by [Nikita Karmakar]
+## Developed with ❤️ using OpenCV and Mediapipe.
 
 If you need any more tweaks, just let me know! 😊
